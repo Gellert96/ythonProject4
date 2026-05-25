@@ -1,0 +1,29 @@
+[project]
+name = "pythonproject4"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Gregory",email = "gregory@example.com"}
+]
+requires-python = "^3.14"
+dependencies = [
+    "pandas (>=3.0.3,<4.0.0)",
+    "openpyxl (>=3.1.5,<4.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "pytest (>=9.0.3,<10.0.0)",
+    "pytest-cov (>=7.1.0,<8.0.0)",
+    "flake8 (>=7.3.0,<8.0.0)",
+    "mypy (>=2.1.0,<3.0.0)"
+]
+
+[tool.flake8]
+exclude = [".venv"]
+max-line-length = 79
