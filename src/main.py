@@ -29,7 +29,7 @@ def main() -> None:
         "5. Поиск переводов физлицам"
     )
 
-    choice = input()
+    choice = input("Введите номер сервиса: ")
 
     if choice == "1":
         year = int(input("Введите год: "))
@@ -44,7 +44,7 @@ def main() -> None:
         )
 
     elif choice == "2":
-        month = input(
+        month_str = input(
             "Введите месяц (YYYY-MM): "
         )
 
@@ -56,7 +56,7 @@ def main() -> None:
 
         print(
             investment_bank(
-                month,
+                month_str,
                 data,
                 limit,
             )

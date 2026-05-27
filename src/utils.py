@@ -11,4 +11,12 @@ def read_transactions_from_excel(
     """
     df = pd.read_excel(file_path)
 
-    return df.to_dict(orient="records")
+    records = df.to_dict(orient="records")
+
+    return [
+        {
+            str(key): value
+            for key, value in row.items()
+        }
+        for row in records
+    ]
